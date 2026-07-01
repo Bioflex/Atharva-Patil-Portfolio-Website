@@ -1,0 +1,140 @@
+/* General Styles for the Home Component */
+.home-container {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.aurora-background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+.glass-navbar {
+  background: rgba(10, 25, 47, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand-text {
+  color: #64FFDA !important;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+  padding-top: 80px;
+}
+
+.hero-section {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.accent-text {
+  color: #64FFDA !important;
+}
+
+.tagline {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Sections */
+section {
+  padding: 8rem 0;
+}
+
+/* Navbar Active State */
+.nav-link.active {
+  color: #64FFDA !important;
+  font-weight: bold;
+  border-bottom: 2px solid #64FFDA;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Project Cards */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 255, 218, 0.1);
+}
+
+/* Custom styles for skill badges.
+  We use a custom class with !important to override any default Bootstrap styles.
+  This ensures the colors you want are always applied.
+*/
+.custom-skill-badge {
+  background-color: var(--custom-badge-bg) !important;
+  color: var(--custom-badge-color) !important;
+  border: 1px solid rgba(100, 255, 218, 0.3);
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  margin: 0.4rem;
+  border-radius: 20px;
+}
+
+.skill-badge {
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 1.5rem;
+    padding: 0.5rem 1.2rem;
+    margin: 0.4rem;
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--badge-bg, #222) !important;
+    color: var(--badge-color, #fff) !important;
+    box-shadow: 0 2px 12px 0 var(--badge-shadow, rgba(0,0,0,0.12));
+    transition: 
+        transform 0.15s cubic-bezier(.4,2,.6,1),
+        box-shadow 0.15s cubic-bezier(.4,2,.6,1);
+    text-shadow: 0 1px 8px rgba(0,0,0,0.08);
+    cursor: pointer;
+}
+.skill-badge:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 24px 0 var(--badge-shadow, rgba(0,0,0,0.18)), 0 0 0.5rem 0.2rem var(--badge-bg, #222);
+    z-index: 2;
+}
+.skill-badge .me-2 {
+    font-size: 1.3em;
+}
+
+.contact-container {
+  max-width: 600px;
+}
+
+/* Added for better spacing */
+h3 {
+  padding-top: 2rem;
+}
+
+#contact {
+  margin-top: 4rem;
+}
+
+.section-fade {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(.4,2,.6,1), transform 0.8s cubic-bezier(.4,2,.6,1);
+  will-change: opacity, transform;
+}
+.section-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
