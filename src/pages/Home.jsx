@@ -30,6 +30,7 @@ import {
   SiGit,
 } from "react-icons/si";
 import "./Home.css";
+import profileImg from "../assets/atharva-formal.jpg";
 
 // --- DATA ---
 const projects = [
@@ -291,8 +292,8 @@ export default function Home() {
               </Col>
               <Col md={4} className="text-center">
                 <img
-                  src="\src\assets\atharva-formal.jpg"
-                  alt="Atharva Patil, a cybersecurity-focused web developer"
+                  src={profileImg}
+                  alt="Atharva Patil Profile Picture"
                   className="img-fluid rounded-circle shadow-lg"
                 />
               </Col>
